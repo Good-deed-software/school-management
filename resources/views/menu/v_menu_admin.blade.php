@@ -91,7 +91,29 @@
                         </ul>
                     </div>
                 </li>
+
+                    <!-- student_form -->
+                    
+                    <li class="menu-item" aria-haspopup="true">
+                    <a href="/student" class="menu-link">
+                        <span class="menu-icon fas fa-cog">
+                        </span>
+                        <span class="menu-text">student_form</span>
+                    </a>
+                </li>	
+
+
             
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="/teacher" class="menu-link">
+                        <span class="menu-icon fas fa-cog">
+                           
+                        </span>
+                        <span class="menu-text">Teachers</span>
+                    </a>
+                </li>	
+
+
                 <li class="menu-item" aria-haspopup="true">
                     <a href="#" class="menu-link">
                         <span class="menu-icon fas fa-cog">
