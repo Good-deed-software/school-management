@@ -79,18 +79,30 @@
                                     <i class="menu-bullet menu-bullet-line">
                                         <span></span>
                                     </i>
+                                    <!-- users---form-->
                                     <span class="menu-text">Users</span>
                                     <span class="menu-label">
                                         <span class="label label-rounded label-primary"><?= $count_user ?></span>
-                                    </span>
-                                    
+                                    </span>                
+                                </a>
+                                  <!-- teaachers---form-->
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="/teachers" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-line">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Teachers</span>
+                                    <span class="menu-label">
+                                        <span class="label label-rounded label-primary"><?= $count_user ?></span>
+                                    </span>                
                                 </a>
                                 
                             </li>
-                    
                         </ul>
                     </div>
                 </li>
+                
             
                 <li class="menu-item" aria-haspopup="true">
                     <a href="#" class="menu-link">

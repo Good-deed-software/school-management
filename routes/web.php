@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\TeachersController;
 
 
 
@@ -26,6 +27,12 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::resource('users', UsersController::class);
 
 // Route::get('/user.get_data',[UserController::class, 'get_data'])->name('get_data');
-Route::resource('users', UsersController::class);
+Route::get('/teachers', [TeachersController::class, 'index'])->name('teacher.index');
+Route::get('/teacher_form',[TeachersController::class, 'create'])->name('teacher_form');
+Route::post('/teachers_data',[TeachersController::class, 'store'])->name('teachers_data');
+Route::get('/teach/edit/{id}',[TeachersController::class, 'edit'])->name('/teach/edit/{id}');
+Route::get('/teach/delete/{id}',[TeachersController::class, 'destroy'])->name('/teach/delete/{id}');
+Route::post('/teachers_update',[TeachersController::class, 'update'])->name('/teachers_update');
