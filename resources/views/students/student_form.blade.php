@@ -1,17 +1,21 @@
-@extends('layouts.app')
-
-@section('content')
-
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-<div class="container">
-    
-            <form action="{{url('st_store')}}"  method="post">
-                @csrf
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>{{$title}}</h2>
+
+                        
+            <form action="@if($students){{url('/student/update/')}}@else{{url('st_store')}}@endif"  method="post">
+                @csrf   
+                             
             <fieldset>
                 <legend>{{ $title }}</legend>
                 <div class="mb-3">
                 <label for="disabledTextInput" class="form-label">Student name</label>
                 <input type="text" name="name" id="name" value="@if($students){{$students->name}}@endif"  class="form-control" placeholder="Student Name">
+                @if($students)
+                <input type="hidden" name="id" value="@if($students){{$students->id}}@endif"  class="form-control" placeholder="Student Name">
+                @endif
                 </div>
 
                 <div class="mb-3">
@@ -43,9 +47,11 @@
             </fieldset>
             </form>
 
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-@endsection
 
 
 

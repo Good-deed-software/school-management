@@ -81,6 +81,8 @@ class StudentController extends Controller
 
     public function edit($id)
     {
+
+       
         $data = [
             'count_user' => 0,
             'menu'       => 'menu.v_menu_admin',
@@ -95,9 +97,14 @@ class StudentController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $student = student::find($request->id);
+        $student->update($request->all()); 
+        return redirect()->back();
+
+        
     }
 
     public function destroy($id)
