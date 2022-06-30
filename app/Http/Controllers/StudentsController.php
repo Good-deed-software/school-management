@@ -21,7 +21,7 @@ class StudentsController extends Controller
         $data = [
             'count_user' => Student::latest()->count(),
             'menu'       => 'menu.v_menu_admin',
-            'content'    => 'content.view_students',
+            'content'    => 'Student.view_students',
             'title'    => 'Student Table'
         ];
 
@@ -49,7 +49,7 @@ class StudentsController extends Controller
         $data = [
             'count_user' => Student::latest()->count(),
             'menu'       => 'menu.v_menu_admin',
-            'content'    => 'content.students_form',
+            'content'    => 'Student.students_form',
             'title'    => 'Students Form',
             "student"  => [],
         ];
@@ -87,7 +87,7 @@ class StudentsController extends Controller
         $data = [
             'count_user' => 0,
             'menu'       => 'menu.v_menu_admin',
-            'content'    => 'content.students_form',
+            'content'    => 'Student.students_form',
             'title'    => 'Edit form',
             'student' => Student::find($id),
         ];
