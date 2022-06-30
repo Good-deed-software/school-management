@@ -13,7 +13,7 @@
                         <table class="table" id="tableUser">
                             <thead class="font-weight-bold text-center">
                                 <tr>
-                                    {{-- <th>No.</th> --}}
+                                     <th>Id</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Level</th>
@@ -112,6 +112,10 @@
             ],
             ajax: "{{ route('users.index') }}",
             columns: [{
+                    data: 'id',
+                    name: 'id'
+                },
+                {
                     data: 'name',
                     name: 'name'
                 },

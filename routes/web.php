@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StudentsController;
 
 
@@ -24,7 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/user', [UsersController::class, 'index'])->name('user.index');
 
 // Route::get('/user.get_data',[UserController::class, 'get_data'])->name('get_data');
 Route::resource('users', UsersController::class);

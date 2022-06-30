@@ -103,7 +103,7 @@ class StudentsController extends Controller
         $student = student::find($request->id);
        
         $student->update($request->all());
-        return redirect()->back();
+        return redirect('students');
     }
 
     public function destroy($id)

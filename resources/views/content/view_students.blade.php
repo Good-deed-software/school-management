@@ -13,7 +13,7 @@
                         <table class="table" id="tableStudent">
                             <thead class="font-weight-bold text-center">
                                 <tr>
-                                    {{-- <th>id</th> --}}
+                                     <th>id</th>
                                     <th>StudentName</th>
                                     <th>FatherName</th>
                                     <th>MotherName</th>
@@ -118,6 +118,10 @@
             ],
             ajax: "{{ route('students.index') }}",
             columns: [{
+                    data: 'id',
+                    name: 'id'
+                },
+                {
                     data: 'student_name',
                     name: 'student_name'
                 },
