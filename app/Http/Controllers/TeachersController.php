@@ -50,8 +50,8 @@ class TeachersController extends Controller
             'count_user' => Teacher::latest()->count(),
             'menu'       => 'menu.v_menu_admin',
             'content'    => 'teachers.teacher_form',
-            'title'    => 'Registration form',
-            'teacher' => [],
+            'title'      => 'Registration form',
+            'teacher'    => [],
         ];
         return view('layouts.v_template',$data);
     }
@@ -60,7 +60,7 @@ class TeachersController extends Controller
     {
         
        Teacher::updateOrCreate(['id' => $request->teacher_id],
-            [
+            [ 
                  'teachername' => $request->teachername,
                  'fathername' => $request->fathername,
                  'mothername' => $request->mothername,

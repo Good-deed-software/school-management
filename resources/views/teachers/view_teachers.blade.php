@@ -85,8 +85,8 @@
             ajax: "{{ route('teacher.index') }}",
             columns: [
                 {   
-                    data: '',
-                    name: ''
+                    data: 'id',
+                    name: 'id'
                 },
                 {   
                     data: 'teachername',
