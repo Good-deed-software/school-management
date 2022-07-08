@@ -88,7 +88,11 @@
                                   <!-- teaachers---form-->
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+<<<<<<< HEAD
                                 <a href="{{route('/teachers')}}" class="menu-link menu-toggle">
+=======
+                                <a href="{{ route('teacher.index')}}" class="menu-link menu-toggle">
+>>>>>>> 30831ff514419513b8f32c73d27c12acdecb4a99
                                     <i class="menu-bullet menu-bullet-line">
                                         <span></span>
                                     </i>

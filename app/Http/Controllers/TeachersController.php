@@ -31,8 +31,8 @@ class TeachersController extends Controller
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
      
-                        $btn = '<div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="btn btn-sm btn-icon btn-outline-success btn-circle mr-2"><a href ="' .url('/teach/edit/').'/'.$row->id.'"><i class=" fi-rr-edit"></i></div></a>';
-                        $btn = $btn.' <div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-sm btn-icon btn-outline-danger btn-circle mr-2"><a href ="' .url('/teach/delete/').'/'.$row->id.'"><i class="fi-rr-trash"></i></div>';
+                        $btn = '<div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="btn btn-sm btn-icon btn-outline-success btn-circle mr-2"><a href ="' .route('/teach/edit/').'/'.$row->id.'"><i class=" fi-rr-edit"></i></div></a>';
+                        $btn = $btn.' <div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-sm btn-icon btn-outline-danger btn-circle mr-2"><a href ="' .route('/teach/delete/').'/'.$row->id.'"><i class="fi-rr-trash"></i></div>';
  
                          return $btn;
                     })
