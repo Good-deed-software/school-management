@@ -30,8 +30,8 @@ class StudentController extends Controller
             return Datatables::of($q_students)
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
-     
-                        $btn = '<div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="btn btn-sm btn-icon btn-outline-success btn-circle mr-2"><a href="'.url('/student/edit/').'/'.$row->id.'"> <i class="fi-rr-edit"></i></a></div>';
+                        $url = route('student.edit',$row->id);
+                        $btn = '<div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Edit" class="btn btn-sm btn-icon btn-outline-success btn-circle mr-2"><a href="'.$url.'"> <i class="fi-rr-edit"></i></a></div>';
                         $btn = $btn.' <div data-toggle="tooltip"  data-id="'.$row->id.'" data-original-title="Delete" class="btn btn-sm btn-icon btn-outline-danger btn-circle mr-2 deleteUser"><i class="fi-rr-trash"></i></div>';
  
                          return $btn;

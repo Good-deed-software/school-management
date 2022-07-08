@@ -88,7 +88,7 @@
                                   <!-- teaachers---form-->
                             </li>
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="/teachers" class="menu-link menu-toggle">
+                                <a href="{{route('/teachers')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-line">
                                         <span></span>
                                     </i>
@@ -108,7 +108,7 @@
                             <!--student form-->
                             
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="/students" class="menu-link menu-toggle">
+                                <a href="{{route('/student')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-line">
                                         <span></span>
                                     </i>

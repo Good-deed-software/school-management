@@ -8,7 +8,7 @@
                 <div class="card-header">{{ $title }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="@if($student){{ url('/students_update') }}@else{{ url('/students_data') }}@endif">
+                    <form method="POST" action="@if($student){{ route('/students_update') }}@else{{ route('/students_data') }}@endif">
                         @csrf
 
                         <div class="form-group row">
