@@ -8,7 +8,7 @@
                 <div class="card-header">{{ $title }}</div>
 
                 <div class="card-body">
-                    <form method="post" action="@if($teacher){{url ('/teachers_update')}}@else{{ url ('/teachers_data') }}@endif">
+                    <form method="post" action="@if($teacher){{route ('teachers_update')}}@else{{ route ('teachers_data') }}@endif">
                         @csrf
                             @if($teacher)
                         <input id="teachername" type="hidden" name="id" value="{{$teacher->id }}">
