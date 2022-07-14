@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\MclassController;
 
 
 
@@ -28,6 +29,10 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/mclasses', [MclassController::class, 'index'])->name('mclasses');
+Route::get('/class_form', [MclassController::class, 'create'])->name('class_form');
+Route::post('/classsubmit', [MclassController::class, 'store'])->name('classsubmit');
+Route::get('/mclasses', [MclassController::class, 'show'])->name('show');
 
 
 Route::get('/student', [StudentController::class, 'index'])->name('students');

@@ -22,7 +22,8 @@ class StudentController extends Controller
             'count_user' => Student::latest()->count(),
             'menu'       => 'menu.v_menu_admin',
             'content'    => 'students.list',
-            'title'    => 'Students'
+            'title'    => 'Students',
+            'students' => Student::all(),
         ];
 
         if ($request->ajax()) {

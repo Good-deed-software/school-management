@@ -104,12 +104,12 @@
 
 
             
+               
                 <li class="menu-item" aria-haspopup="true">
-                    <a href="/teacher" class="menu-link">
+                    <a href="/mclasses" class="menu-link">
                         <span class="menu-icon fas fa-cog">
-                           
                         </span>
-                        <span class="menu-text">Teachers</span>
+                        <span class="menu-text">Classes Enquiery</span>
                     </a>
                 </li>	
 
